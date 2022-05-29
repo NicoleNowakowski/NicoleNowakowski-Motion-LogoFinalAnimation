@@ -1,10 +1,13 @@
 import { gsap } from "gsap";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+import { GSDevTools } from "gsap/GSDevTools";
 
-
-gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin)
+gsap.registerPlugin(GSDevTools);
 
 const mainTL = gsap.timeline();
 
+
 mainTL
+
+
+
+GSDevTools.create();
