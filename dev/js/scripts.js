@@ -61,7 +61,7 @@ function rotateBeans() {
     .to("#blink", {alpha:1, duration:2.5},"aphrodite")
 
     .to("#eye", {alpha:0, duration:0.6})
-    .to("#eye", {alpha:1, duration:1},"aphrodite+=2")
+    .to("#eye", {alpha:1, duration:0.5},"aphrodite+=3.5")
     .to("#eye", {alpha:1, duration:1})
  
     
@@ -75,4 +75,4 @@ mainTL.add(setStage())
 
 
 
-GSDevTools.create();
+//GSDevTools.create();
