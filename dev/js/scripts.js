@@ -20,22 +20,30 @@ function setStage() {
     .set("#circle",{ rotate:149, transformOrigin:"center center"})
     .set("#circle2",{ opacity:0})
     .set("#connectinglines",{alpha:0})
-    .set("#coffeebean2", {rotate:-300, svgOrigin: "618.36px 356.35px", alpha: 1})
-    .set("#coffeebean3", {rotate:-240, svgOrigin: "618.36px 356.35px", alpha: 1})
-    .set("#coffeebean4", {rotate:-180, svgOrigin: "618.36px 356.35px", alpha: 1})
-    .set("#coffeebean5", {rotate:-120,svgOrigin: "618.36px 356.35px", alpha: 1})
-    .set("#coffeebean6", {rotate:-60, svgOrigin: "618.36px 356.35px", alpha: 1})
+    .set("#coffeebean1", { alpha: 0, x:-1000, rotate:-360, transformOrigin:"center center" })
+    .set("#coffeebean2", {rotate:-300, svgOrigin: "618.36px 356.35px", alpha: 0})
+    .set("#coffeebean3", {rotate:-240, svgOrigin: "618.36px 356.35px", alpha: 0})
+    .set("#coffeebean4", {rotate:-180, svgOrigin: "618.36px 356.35px", alpha: 0})
+    .set("#coffeebean5", {rotate:-120,svgOrigin: "618.36px 356.35px", alpha: 0})
+    .set("#coffeebean6", {rotate:-60, svgOrigin: "618.36px 356.35px", alpha: 0})
     
     return tl;
 }
 
 function rotateBeans() {
     let tl = gsap.timeline();
-    tl.to("#coffeebean2", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1}, "coffee+=.5")
-    .to("#coffeebean3", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1}, "coffee+=.5")
-    .to("#coffeebean4", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee+=.5")
-    .to("#coffeebean5", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee+=.5")
-    .to("#coffeebean6", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee+=.5")
+    tl .to("#coffeebean1", {duration:1.5, alpha: 1, x:0, rotate:0, transformOrigin:"center center"})
+    .to("#coffeebean2", {duration:0, alpha: 1}, "coffee")
+    .to("#coffeebean3", {duration:0, alpha: 1}, "coffee")
+    .to("#coffeebean4", {duration:0, alpha: 1}, "coffee")
+    .to("#coffeebean5", {duration:0, alpha: 1}, "coffee")
+    .to("#coffeebean6", {duration:0, alpha: 1}, "coffee")
+
+    .to("#coffeebean2", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee")
+    .to("#coffeebean3", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee")
+    .to("#coffeebean4", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee")
+    .to("#coffeebean5", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee")
+    .to("#coffeebean6", {duration:1.5, rotate:0, svgOrigin: "618.36px 356.35px", alpha: 1},"coffee")
     
     .to("#beanoutline1", {duration:1.5, stroke:"#DA9C8B"},"color")
     .to("#beanoutline2", {duration:1.5, stroke:"#DA9C8B"},"color")
@@ -55,14 +63,14 @@ function rotateBeans() {
     .from("#circle", {duration: 1.5, drawSVG: "0%"},"color")
     .to("#circle2", {opacity:1, duration: 1, morphSVG: {shape: "#connectinglines", type: "rotational", origin:"center"}})
     .from("#aphroditecutoutstroke", {alpha:1, duration: 1.5, drawSVG: "0%"},"cutout")
-    .to("#aphroditecutout", {alpha:1, duration:1},"cutout+=1.5")
+    .to("#aphroditecutout", {alpha:1, duration:1.5},"cutout+=.5")
     .to("#aphrodite", {alpha:1, duration:2.5}, "aphrodite")
     .to("#eye", {alpha:1, duration:2.5},"aphrodite")
     .to("#blink", {alpha:1, duration:2.5},"aphrodite")
 
-    .to("#eye", {alpha:0, duration:0.6})
-    .to("#eye", {alpha:1, duration:0.5},"aphrodite+=3.5")
-    .to("#eye", {alpha:1, duration:1})
+    .to("#eye", {alpha:0, duration:0.4})
+    .to("#eye", {alpha:1, duration:0.4},"aphrodite+=2")
+    .to("#eye", {alpha:1, duration:0.4})
  
     
    
