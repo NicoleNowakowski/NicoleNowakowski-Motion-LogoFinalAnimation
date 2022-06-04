@@ -68,8 +68,8 @@ function rotateBeans() {
     .to("#eye", {alpha:1, duration:2.5},"aphrodite")
     .to("#blink", {alpha:1, duration:2.5},"aphrodite")
 
-    .to("#eye", {alpha:0, duration:0.4})
-    .to("#eye", {alpha:1, duration:0.4},"aphrodite+=2")
+    .to("#eye", {alpha:0, duration:0.5})
+    .to("#eye", {alpha:1, duration:1},"aphrodite+=3")
     .to("#eye", {alpha:1, duration:0.4})
  
     
