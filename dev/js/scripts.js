@@ -63,14 +63,14 @@ function rotateBeans() {
     .from("#circle", {duration: 1.5, drawSVG: "0%"},"color")
     .to("#circle2", {opacity:1, duration: 1, morphSVG: {shape: "#connectinglines", type: "rotational", origin:"center"}})
     .from("#aphroditecutoutstroke", {alpha:1, duration: 1.5, drawSVG: "0%"},"cutout")
-    .to("#aphroditecutout", {alpha:1, duration:1.5},"cutout+=.5")
+    .to("#aphroditecutout", {alpha:1, duration:1.5},"cutout")
     .to("#aphrodite", {alpha:1, duration:2.5}, "aphrodite")
     .to("#eye", {alpha:1, duration:2.5},"aphrodite")
     .to("#blink", {alpha:1, duration:2.5},"aphrodite")
 
-    .to("#eye", {alpha:0, duration:0.5})
-    .to("#eye", {alpha:1, duration:1},"aphrodite+=3")
-    .to("#eye", {alpha:1, duration:0.4})
+    .to("#eye", {alpha:0, duration:0.5},"aphrodite+=2")
+    .to("#eye", {alpha:1, duration:0.8},"aphrodite+=3")
+    .to("#eye", {alpha:1, duration:0.5})
  
     
    
