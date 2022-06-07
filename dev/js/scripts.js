@@ -20,7 +20,7 @@ function setStage() {
     .set("#circle",{ rotate:149, transformOrigin:"center center"})
     .set("#circle2",{ opacity:0})
     .set("#connectinglines",{alpha:0})
-    .set("#coffeebean1", { alpha: 0, x:-1000, rotate:-360, transformOrigin:"center center" })
+    .set("#coffeebean1", { alpha: 0, rotate:-360, scale:0, transformOrigin:"center center" })
     .set("#coffeebean2", {rotate:-300, svgOrigin: "618.36px 356.35px", alpha: 0})
     .set("#coffeebean3", {rotate:-240, svgOrigin: "618.36px 356.35px", alpha: 0})
     .set("#coffeebean4", {rotate:-180, svgOrigin: "618.36px 356.35px", alpha: 0})
@@ -32,7 +32,7 @@ function setStage() {
 
 function rotateBeans() {
     let tl = gsap.timeline();
-    tl .to("#coffeebean1", {duration:1.5, alpha: 1, x:0, rotate:0, transformOrigin:"center center"})
+    tl .to("#coffeebean1", {duration:1.5, alpha: 1, rotate:0, scale:1, transformOrigin:"center center"})
     .to("#coffeebean2", {duration:0, alpha: 1}, "coffee")
     .to("#coffeebean3", {duration:0, alpha: 1}, "coffee")
     .to("#coffeebean4", {duration:0, alpha: 1}, "coffee")
